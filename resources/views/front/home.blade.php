@@ -36,6 +36,58 @@
         </form>
     </div>
 </div>
+<div class="container">
+    <div class="about-us">
+        <div class="about-us-left">
+        <img src="{{url('assets/img/banner5.png')}}" alt="ANANASAS">
+        </div>
+        <div class="about-us-right">
+            <div class="circle">
+                <span>01</span>
+            </div>
+            <h2>About us</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem vitae animi, iste nisi facere voluptatibus, omnis velit nesciunt repellendus saepe sunt iusto tempora officiis error! Vitae sequi odio quia quos!</p>
+            <button class="dd-button btn btn-outline-success">READ MORE</button>
+        </div>
+    </div>
+    <div class="testimonials">
+        <div class="testimonials-left">
+            <img src="{{url('assets/img/banner6.png')}}" alt="girl">
+        </div>
+        <div class="testimonials-right">
+            <div class="circle-testimonials">
+                <span>02</span>
+            </div>
+            <h2>Testimonials</h2>
+            <div class="testimonials-person">
+                <div class="testimonials-img">
+                    <img src="{{url('assets/img/testimonials3.jpg')}}" alt="profile-1">
+                </div>
+                <span>Shetty Jamie</span>
+                <span>Designer</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique vero sit.</p>
+            </div>
+            
+            <div class="testimonials-person bg-2">
+                <div class="testimonials-img">
+                    <img src="{{url('assets/img/testimonials2.jpg')}}" alt="profile-2">
+                </div>
+                <span>Patnaik Darcy</span>
+                <span>Designer</span>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, esse rem! Voluptates.</p>
+            </div>
+            <div class="testimonials-person bg-3">
+                <div class="testimonials-img">
+                    <img src="{{url('assets/img/testimonials1.jpg')}}" alt="profile-3">
+                </div>
+                <span>Michiel Huisman</span>
+                <span>Designer</span>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos voluptatum perspiciatis repellat.</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
 @foreach ($products as $product)    
 <div class="container">
             
@@ -67,6 +119,7 @@
                         </div>
                     </div>
             </div>
+           
 </div>
 @endforeach
 <form action="{{route('buy')}}" method="POST">

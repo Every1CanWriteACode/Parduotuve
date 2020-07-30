@@ -16,11 +16,11 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             
-            // $table->unsignedBigInteger('image_id');
             $table->string('title',50);
             $table->decimal('price')->default(0);;
             $table->integer('sale')->default(0);
-            // $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
+            // $table->unsignedBigInteger('image');
+            // $table->foreign('image')->references('image')->on('images')->onDelete('cascade');
             // $table->text('description');
             $table->timestamps();
         });

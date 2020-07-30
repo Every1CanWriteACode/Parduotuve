@@ -1,5 +1,4 @@
 
-
 @foreach ($cartProducts as $cartProduct)
 
              <li>

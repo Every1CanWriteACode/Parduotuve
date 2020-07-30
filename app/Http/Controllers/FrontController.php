@@ -99,8 +99,12 @@ class FrontController extends Controller
         // @include('front.cart');
         // $shopCart = new Product;
         
-    
+        $product = New Product;
+        $product->image = $request->product_image;
+        $product->save();
+
         $products = Product::all();
+
         return view('front.cart', array_merge(compact('products'),$cart->getCart()));
         // return redirect()->back();
         // print_r('aaaaaaaaaa');

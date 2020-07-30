@@ -270,7 +270,159 @@
          }
     }
 
-  
+  .about-us{
+      display: inline-block;
+      width: 100%;
+      padding: 180px 0;
+  }
+    .about-us-left{
+        display: inline-block;
+        width: 50%;
+        margin: 0;
+        float: left;
+    }
+        .about-us-left img{
+            width: 100%;
+            padding-top: 20px;
+        }
+    .about-us-right{  
+        display: inline-block;
+        margin: 0;   
+        width: 50%;
+        padding-top: 80px;
+        float: right;
+        text-align: center;
+        .circle{
+            display: inline-block;
+            // float: left;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: yellow;
+            margin: 0;
+        }   
+            .circle span{
+                margin: 0;
+               font-size: 50px;
+               line-height: 80px;
+               font-weight: 800;
+            }
+    }
+        .about-us-right h2{
+            display: inline-block;
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 800;
+        }
+        .about-us-right p{
+
+            text-align: justify;
+            padding: 20px 0;
+            text-align: center;
+            display: inline-block;
+            font-size: 18px;
+            line-height: 20px;
+            width: 100%;
+        }
+    .testimonials{
+        display: inline-block;
+        width: 100%;
+        padding: 0 0 180px 0;
+    }
+        .testimonials-left{
+            display: inline-block;
+            width: 50%;
+            margin: 0;
+            float: left;
+        }
+            .testimonials-left img{
+                width: 100%;
+                padding-top: 120px;
+            }
+        .testimonials-right{
+            display: inline-block;
+            margin: 0;   
+            width: 50%;
+            // padding-top: 80px;
+            float: right;
+            text-align: center;
+            // background-color: chocolate;
+            .circle-testimonials{
+                display: inline-block;
+                // float: left;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: burlywood;
+                margin: 0;
+            }   
+                .circle-testimonials span{
+                    margin: 0;
+                    font-size: 50px;
+                    line-height: 80px;
+                    font-weight: 800;
+                }
+        }
+        .testimonials-right h2{
+            display: inline-block;
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 800;
+        }
+        .testimonials-person{
+            width: 100%;
+            background-color: #E6F3E9;
+            border-radius: 8px;
+
+        }
+        .bg-2{
+            width: 100%;
+            background-color: #A5F7E8;
+            margin: 10px 0;
+        }
+        .bg-3{
+            width: 100%;
+            background-color: #F3E9E6;
+        }
+            .testimonials-img img{
+                // display: inline-block;
+                float: left;
+                margin: 0;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin: 10px 0 0 10px;
+                margin-right: 10px;
+            }
+            .testimonials-person span{
+                padding-top: 10px;
+                margin-top: 0;
+                display: block;
+                // width: 80%;
+                float: left;
+                text-align: left;
+                margin: 0;
+                padding-bottom: 8px;
+                margin-bottom: 3px;
+                font-size: 15px;
+                font-family: Roboto Slab,serif;
+                color: #121212;
+            }
+            .testimonials-person span:nth-child(3){
+               border-top: solid grey 1px;
+               display: block;
+            //    width: 10%;
+            }
+            .testimonials-person p{
+                text-align: justify;
+                float: right;
+            // padding: 20px 0 20px 100px;
+            text-align: center;
+            display: inline-block;
+            font-size: 18px;
+            line-height: 20px;
+            width: 80%;
+            }
     //karusele
 
     // .swiper-container {
