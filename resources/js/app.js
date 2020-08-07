@@ -6,6 +6,7 @@
 
 const { unset } = require('lodash');
 const { default: Axios } = require('axios');
+const { data } = require('jquery');
 
 require('./bootstrap');
 
@@ -110,6 +111,69 @@ document.querySelectorAll('.plus-button').forEach((button)=>{
     })
 })
 
+
+
+let feed = [
+    {
+        author: {
+            name: 'Shetty ',
+            surname: 'Jamie',
+            img: 'testimonials3.jpg'
+        },
+        time: 1583832433393,
+        content: {
+            text: 'hagsld khfasdfl asldfoa hsdljfa lsdjfjasd',
+            background: 'red'
+        }
+    },
+    {
+        author: {
+            name: 'Patnaik ',
+            surname: 'Darcy',
+            img: 'testimonials2.jpg'
+        },
+        time: 1583832433393,
+        content: {
+            text: 'hagsld khfasdfl asldfoa hsdljfa lsdjfjasd',
+            background: 'purple'
+        }
+    },
+    {
+        author: {
+            name: 'Michiel ',
+            surname: 'Huisman',
+            img: 'testimonials1.jpg'
+        },
+        time: 1583832433393,
+        content: {
+            text: 'hagsld khfasdfl asldfoa hsdljfa lsdjfjasd',
+            background: 'green'
+        }
+    }
+];
+// console.log(feed);
+function testimonials(testimonials){
+    let HTML = '';
+        document.querySelectorAll('.testimonials-info').innerHTML = HTML;
+    for(let i=0; i<testimonials.length; i++){
+            const post=testimonials[i];
+            // console.log(post.author);
+        HTML+=`
+        <div class="testimonials-person">
+            <div class="testimonials-img">
+                <img src="js/img/${post.author.img}" alt="profile-${i+1}">
+            </div>
+            <div class="span">
+                <span>${post.author.name}${post.author.surname}</span>
+                <span>Designer</span>
+            </div>
+            <p>${post.content.text}</p>
+        </div>
+        `;
+    }
+    return  document.querySelector('.testimonials-info').innerHTML = HTML;
+}
+testimonials(feed);
 //karusele
 
 // var mySwiper = new Swiper('.swiper-container', {

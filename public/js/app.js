@@ -37285,6 +37285,9 @@ var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.j
 var _require2 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js"),
     Axios = _require2["default"];
 
+var _require3 = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"),
+    data = _require3.data;
+
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // window.Vue = require('vue');
 
 /**
@@ -37377,7 +37380,56 @@ document.querySelectorAll('.plus-button').forEach(function (button) {
     var count = form.querySelector("[name=count]").value;
     form.querySelector("[name=count]").value = Number(count) + 1;
   });
-}); //karusele
+});
+var feed = [{
+  author: {
+    name: 'Shetty ',
+    surname: 'Jamie',
+    img: 'testimonials3.jpg'
+  },
+  time: 1583832433393,
+  content: {
+    text: 'hagsld khfasdfl asldfoa hsdljfa lsdjfjasd',
+    background: 'red'
+  }
+}, {
+  author: {
+    name: 'Patnaik ',
+    surname: 'Darcy',
+    img: 'testimonials2.jpg'
+  },
+  time: 1583832433393,
+  content: {
+    text: 'hagsld khfasdfl asldfoa hsdljfa lsdjfjasd',
+    background: 'purple'
+  }
+}, {
+  author: {
+    name: 'Michiel ',
+    surname: 'Huisman',
+    img: 'testimonials1.jpg'
+  },
+  time: 1583832433393,
+  content: {
+    text: 'hagsld khfasdfl asldfoa hsdljfa lsdjfjasd',
+    background: 'green'
+  }
+}]; // console.log(feed);
+
+function testimonials(testimonials) {
+  var HTML = '';
+  document.querySelectorAll('.testimonials-info').innerHTML = HTML;
+
+  for (var i = 0; i < testimonials.length; i++) {
+    var post = testimonials[i]; // console.log(post.author);
+
+    HTML += "\n        <div class=\"testimonials-person\">\n            <div class=\"testimonials-img\">\n                <img src=\"js/img/".concat(post.author.img, "\" alt=\"profile-").concat(i + 1, "\">\n            </div>\n            <div class=\"span\">\n                <span>").concat(post.author.name).concat(post.author.surname, "</span>\n                <span>Designer</span>\n            </div>\n            <p>").concat(post.content.text, "</p>\n        </div>\n        ");
+  }
+
+  return document.querySelector('.testimonials-info').innerHTML = HTML;
+}
+
+testimonials(feed); //karusele
 // var mySwiper = new Swiper('.swiper-container', {
 //     // Optional parameters
 //     // If we need pagination

@@ -11307,6 +11307,10 @@ a.text-dark:focus {
   font-weight: 800;
 }
 
+.testimonials-right {
+  margin-top: 60px;
+}
+
 .testimonials-person {
   width: 100%;
   background-color: #E6F3E9;
@@ -11324,6 +11328,11 @@ a.text-dark:focus {
   background-color: #F3E9E6;
 }
 
+.testimonials-img {
+  display: inline-block;
+  float: left;
+}
+
 .testimonials-img img {
   float: left;
   margin: 0;
@@ -11332,6 +11341,12 @@ a.text-dark:focus {
   border-radius: 50%;
   margin: 10px 0 0 10px;
   margin-right: 10px;
+}
+
+.span {
+  display: inline-block;
+  float: left;
+  width: 100px;
 }
 
 .testimonials-person span {
@@ -11348,7 +11363,8 @@ a.text-dark:focus {
   color: #121212;
 }
 
-.testimonials-person span:nth-child(3) {
+.testimonials-person span:nth-child(2) {
+  padding: 0;
   border-top: solid grey 1px;
   display: block;
 }

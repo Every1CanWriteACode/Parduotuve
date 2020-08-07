@@ -1,5 +1,5 @@
 @extends('front.app')
-
+<script src="{{asset('main.js')}}"></script>
 @section('content')
 {{-- <!-- Slider main container -->
 
@@ -58,13 +58,16 @@
             <div class="circle-testimonials">
                 <span>02</span>
             </div>
-            <h2>Testimonials</h2>
+            <div class="testimonials-info">
+            {{-- <h2>Testimonials</h2>
             <div class="testimonials-person">
                 <div class="testimonials-img">
                     <img src="{{url('assets/img/testimonials3.jpg')}}" alt="profile-1">
                 </div>
-                <span>Shetty Jamie</span>
-                <span>Designer</span>
+                <div class="span">
+                    <span>Shetty Jamie</span>
+                    <span>Designer</span>
+                </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique vero sit.</p>
             </div>
             
@@ -72,19 +75,23 @@
                 <div class="testimonials-img">
                     <img src="{{url('assets/img/testimonials2.jpg')}}" alt="profile-2">
                 </div>
-                <span>Patnaik Darcy</span>
-                <span>Designer</span>
+                <div class="span">
+                    <span>Patnaik Darcy</span>
+                    <span>Designer</span>
+                </div>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, esse rem! Voluptates.</p>
             </div>
             <div class="testimonials-person bg-3">
                 <div class="testimonials-img">
                     <img src="{{url('assets/img/testimonials1.jpg')}}" alt="profile-3">
                 </div>
-                <span>Michiel Huisman</span>
-                <span>Designer</span>
+                <div class="span">
+                    <span>Michiel Huisman</span>
+                    <span>Designer</span>
+                
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos voluptatum perspiciatis repellat.</p>
-            </div>
-            
+            </div> --}}
+        
         </div>
     </div>
 </div>
@@ -129,4 +136,5 @@
     Phone:<input type="text" name="phone" value="">
     <button class="add-button "type="submit">BUY ITEM</button>
 </form>
+{{-- <script type="text/javascript" src="{{ URL::asset('js/app.js')}}"></script> --}}
 @endsection
