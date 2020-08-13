@@ -174,24 +174,90 @@ function testimonials(testimonials){
     return  document.querySelector('.testimonials-info').innerHTML = HTML;
 }
 testimonials(feed);
-//karusele
 
-// var mySwiper = new Swiper('.swiper-container', {
-//     // Optional parameters
+let hero = [
+    {
+        content: {
+                h3: 'Discount fruits at the store 20%',
+                h1: '100% natural from the farm',
+                p: 'Reach for a healthier you with organic foods.',
+                photo: 'slider4.jpg'
+            }
+    },
+    {
+        content: {
+                h3: 'Discount fruits at the store 20%',
+                h1: '100% natural from the farm',
+                p: 'Reach for a healthier you with organic foods.',
+                photo: 'slider8.jpg'
+            }
+    },
+    {
+        content: {
+                h3: 'Discount fruits at the store 20%',
+                h1: '100% natural from the farm',
+                p: 'Reach for a healthier you with organic foods.',
+                photo: 'slider9.jpg'
+            }
+    },
+];
+function heroText(hero){
+    let HTML = '';
+    document.querySelectorAll('.swiper-wrapper').innerHTML = HTML;
+for(let i=0; i<hero.length; i++){
+        const post=hero[i];
+    HTML+=`
+    <div class="swiper-slide" style="background-image: url('../assets/img/${post.content.photo}');">
+        <div class="hero-text">
+            <h3>${post.content.h3}</h3>
+            <h1>${post.content.h1}</h1>
+            <p>${post.content.p}</p>
+            <form action="" method="post" class="">
+                @csrf
+                <button type="submit" class="btn btn-outline-success">Shop now</button>
+            </form>
+        </div>
+    </div>
+    `;
+    //kaip formuoti su js htmla, kad nerasytu @csrf, bet jis veiktu laravelyje?
+}
+return  document.querySelector('.swiper-wrapper').innerHTML = HTML;
+}
+heroText(hero);
+
+
+//karusele
+// core version + navigation, pagination modules:
+import Swiper, { Navigation, Pagination } from 'swiper';
+import swiper from 'swiper/bundle';
+// configure Swiper to use modules
+Swiper.use([Navigation, Pagination]);
+
+import 'swiper/swiper-bundle.css';
+var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    // direction: 'horizontal',
+    loop: true,
+    effect: 'flip',
+    grabCursor: true,
+   
+    // If we need pagination
+    // pagination: {
+    //   el: '.swiper-pagination',
+    // },
   
-//     // If we need pagination
-//     pagination: {
-//       el: '.swiper-pagination',
-//     },
-  
-//     // Navigation arrows
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-  
-//     // And if we need scrollbar
-//     scrollbar: {
-//       el: '.swiper-scrollbar',
-//     },
-//   })
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+        speed: 1000,
+        spaceBetween: 0,
+        grabCursor: false,
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })
+

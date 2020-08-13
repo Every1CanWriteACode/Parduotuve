@@ -1,32 +1,66 @@
 @extends('front.app')
 <script src="{{asset('main.js')}}"></script>
 @section('content')
-{{-- <!-- Slider main container -->
-
-
+{{-- -------------------------- --}}
+<!-- Slider main container -->
+<div class="background-hero">
 <div class="swiper-container">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        ...
+        {{-- <div class="swiper-slide" style="background-image: url('../assets/img/slider4.jpg');">
+            <div class="hero-text">
+                <h3>Discount fruits at the store 20%</h3>
+                <h1>100% natural from the farm</h1>
+                <p>Reach for a healthier you with organic foods.</p>
+                <form action="" method="post" class="">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-success">Shop now</button>
+                </form>
+            </div> --}}
+            {{-- <img src="{{url('assets/img/slider4.jpg')}}" alt="ANANASAS"> --}}
+        {{-- </div>
+        <div class="swiper-slide" style="background-image: url('../assets/img/slider8.jpg');">
+            <div class="hero-text">
+                <h3>Discount fruits at the store 20%</h3>
+                <h1>100% natural from the farm</h1>
+                <p>Reach for a healthier you with organic foods.</p>
+                <form action="" method="post" class="">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-success">Shop now</button>
+                </form>
+            </div> --}}
+            {{-- <img src="{{url('assets/img/slider8.jpg')}}" alt="ANANASAS"> --}}
+        {{-- </div>
+        <div class="swiper-slide" style="background-image: url('../assets/img/slider9.jpg');">
+            <div class="hero-text" >
+                <h3>Discount fruits at the store 20%</h3>
+                <h1>100% natural from the farm</h1>
+                <p>Reach for a healthier you with organic foods.</p>
+                <form action="" method="post" class="">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-success">Shop now</button>
+                </form> --}}
+            {{-- </div> --}}
+            {{-- <img src="{{url('assets/img/slider9.jpg')}}" alt="ANANASAS"> --}}
+        {{-- </div> --}}
+        
     </div>
     <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
+    {{-- <div class="swiper-pagination"></div> --}}
 
     <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev">prev</div>
-    <div class="swiper-button-next">next</div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 
     <!-- If we need scrollbar -->
     <div class="swiper-scrollbar"></div>
-</div> --}}
- {{-- //-----------------------------------------------bandau karusele  --}}
-<div class="hero" style="background-image: url('../assets/img/slider4.jpg');">
+</div>
+</div>
+{{-- -------------------------- --}}
+{{-- <div class="hero" style="background-image: url('../assets/img/slider4.jpg');"> --}}
     
-    <div class="hero-text">
+    {{-- <div class="hero-text">
         <h3>Discount fruits at the store 20%</h3>
         <h1>100% natural from the farm</h1>
         <p>Reach for a healthier you with organic foods.</p>
@@ -34,7 +68,7 @@
             @csrf
             <button type="submit" class="btn btn-outline-success">Shop now</button>
         </form>
-    </div>
+    </div> --}}
 </div>
 <div class="container">
     <div class="about-us">
@@ -136,5 +170,4 @@
     Phone:<input type="text" name="phone" value="">
     <button class="add-button "type="submit">BUY ITEM</button>
 </form>
-{{-- <script type="text/javascript" src="{{ URL::asset('js/app.js')}}"></script> --}}
 @endsection

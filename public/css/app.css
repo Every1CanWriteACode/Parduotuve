@@ -10992,6 +10992,7 @@ a.text-dark:focus {
   font-weight: 800;
   font-size: 15px;
   line-height: 20px;
+  z-index: 100;
   top: 41px;
   right: 2px;
   border-radius: 10px;
@@ -11057,13 +11058,29 @@ a.text-dark:focus {
   float: right;
 }
 
-.hero {
-  padding: 0;
+.swiper-container {
   width: 100%;
   height: 100vh;
+  margin: 0 200px;
+}
+
+.swiper-container img {
   background-position: left center fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff !important;
+  line-height: 20px !important;
 }
 
 .hero-text {
